@@ -6,20 +6,56 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import json
 import sys
+import ast
 
+
+#Get input from form:
+info = ast.literal_eval(sys.argv[1])
 #key inputs
-original_name="Michael Petrie"
+if("fname" in info):
+    first_name = info["fname"]
+last_name=""
+if("lname" in info):
+    last_name = info["lname"]
+
+original_name=first_name+" "+last_name
 name=original_name.replace(" ","+")
-age=47
-location="Ambler PA"
+
+age=0
+if("age" in info):
+    age = int(info["age"])
+
+city=""
+if("city" in info):
+    city = info["city"]
+state=""
+if("state" in info):
+    state = info["state"]
+location=city+" "+state
+
 other_location=""
+
 school=""
-phone_number="267-975-6880"
-email="nunyallbiz@yahoo.com"
-other_email="mikep007@gmail.com"
+if("school" in info):
+    school = info["school"]
+
+phone_number=""
+if("pnumber" in info):
+    phone_number = info["pnumber"]
+
+email=""
+if("email" in info):
+    phone_number = info["email"]
+
+other_email=""
 nikename=""
 other_nickname=""
-other_keywords="Social Detection"
+other_keywords = ""
+if("keywords" in info):
+    other_keywords= info["keywords"]
+
+
+blacklist=["https://www.spokeo.com","https://www.whitepages.com","https://www.ussearch.com","https://www.beenverified.com","http://handmadegardens.net"]
 
 keywords=[]
 output_links=set()
@@ -64,6 +100,13 @@ def isDuplicate(link):
     else:
         return True
 
+#check if link is in blacklist
+def inBlacklist(link):
+    for item in blacklist:
+        if item in link:
+            return True
+    return False
+
 #check if it's the right person
 def isRightPerson(title,description):
     real_name = original_name.lower()
@@ -84,7 +127,7 @@ def google_search(keywords):
     url="https://www.google.com/search?q="+keywords
     driver.maximize_window()
     driver.get(url)
-    time.sleep(3)
+    # time.sleep(1)
     content = driver.page_source.encode('utf-8').strip()
     soup = BeautifulSoup(content, 'html.parser')
 
@@ -101,6 +144,7 @@ def google_search(keywords):
         duplicate=False
         is_right_person = True
         no_for_image_page = True
+        is_inblacklist = False
         #Get title elements
         result_title = result.find(class_="LC20lb")
 
@@ -119,6 +163,7 @@ def google_search(keywords):
             title_link = title_link.find("a")
             title_link = title_link.get('href')
             duplicate = isDuplicate(title_link)
+            is_inblacklist = inBlacklist(title_link)
 
         #Get description
         description=''
@@ -128,7 +173,7 @@ def google_search(keywords):
         else:
             return
         is_right_person = isRightPerson(title,description)
-        if not duplicate and is_right_person and no_for_image_page:
+        if not duplicate and is_right_person and no_for_image_page and not is_inblacklist:
             all_results.append([title,title_link,description])
 
 def main():

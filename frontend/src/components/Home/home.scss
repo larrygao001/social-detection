@@ -1,0 +1,78 @@
+.note{
+    // margin: 100px 200px 0 100px;
+    transform: translate(0, 100%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background:linear-gradient(rgba(163, 120, 56, 0.5), rgba(90, 92, 66, 0.5));
+    border-radius: 10px;
+    color:white;
+    font-size: 22px;
+    margin:100px 120px;
+  }
+  .note h4{
+    border-bottom: 1px solid rgba(255,255,255,.25);
+  }
+  .note:hover {
+    box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+  .home{
+    background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.5)),url("../../assets/social-media-3758364_1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+  }
+  
+  .home #welcome{
+    padding-top: 100px;
+    color:white;
+    text-align: center;
+  }
+
+  .home #welcome a{
+    text-decoration: none;
+    color:rgb(168, 177, 87);
+  }
+
+  .home #welcome a:hover{
+    color: rgb(114, 163, 82);
+  }
+
+
+.start{
+  background: #fff;
+  position: absolute;
+  margin-top: 20px;
+  left: 32%;
+  top: 25%;
+  text-align: center;
+  transform: translate(50%, 50%);
+  padding: 20px 40px;
+  border: none;
+  color: #333;
+  background: fade(#fff, 95%);
+  text-transform: uppercase;
+  border-radius: 100px;
+  letter-spacing: .2em;
+  box-shadow: 0 0 20px fade(#000, 12%);
+  cursor: pointer;
+}
+
+.start:hover{
+  text-decoration: none;
+}
+
+
+#source{
+  text-decoration:none;
+  color:rgb(133, 175, 163)
+}
+#source:hover{
+  color:rgb(36, 134, 105)
+}

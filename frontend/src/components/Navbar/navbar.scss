@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Norican|Permanent+Marker|Righteous&display=swap');
+
+.navbar #logo{
+    height:40px;
+}
+
+.navbar .navbar-brand{
+    font-family: 'Kaushan Script', cursive;;
+    padding-left: 20px;
+    font-size: 38px;
+    letter-spacing: .1em;
+}
+
+.navbar .navbar-brand:hover{
+    color:rgb(189, 165, 58) !important;
+}
+.search{
+    padding-left:20px;
+    font-size:30px;
+    // font-family:'Norican';
+    color:black;
+    border-left:solid black 6px;
+}
+
+.search:hover{
+    text-decoration: none;
+}
+
+#register{
+    font-size: 20px;
+    color:black;
+}
+
+#register:hover{
+    color:rgb(114, 110, 110);
+}
+
+#logout{
+    padding-left:10px;
+}
+

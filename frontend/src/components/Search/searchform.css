@@ -1,0 +1,96 @@
+#fname, #lname{
+    width:200px;
+    height:36px;
+    margin:0 20px;
+
+}
+#email{
+    width:220px;
+    height:36px;
+    margin: 0 20px;
+    padding-left:20px;
+}
+
+#school{
+    width:260px;
+    height:36px;
+    margin-left: 20px;
+}
+
+#city{
+    width:240px;
+    height:36px;
+    margin-left: 20px;
+}
+
+#select-states{
+    width:60px;
+    margin-left: 20px;
+}
+
+#age{
+    width:200px;
+    height:36px;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+#pnumber{
+    width:200px;
+    height:36px;
+    margin: 0 20px;
+}
+
+#keywords{
+    width:240px;
+    height:36px;
+    margin: 20px 20px;
+}
+
+
+.phone-number{
+    margin-left: 68px;
+}
+
+.basic-info{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.education{
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.states{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#left{
+    float:left;
+}
+
+#right{
+    float: right;
+}
+
+#center{
+    display: inline;
+}
+
+
+.keywords{
+    text-align: left;
+    margin-left:-290px;
+}
+
+
+@-moz-document url-prefix() {
+    #select-states {
+        min-height:48px;
+        width: 100px;
+        margin-top:-10px;
+    }
+}

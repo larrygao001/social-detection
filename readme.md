@@ -24,7 +24,7 @@ The application uses beautifulsoup and selenium to automate web scrapping proces
 
 3. Launch app
   Navigate to backend directory,run `npm install` to install all the dependencies, and `npm start` to run the application.
-  Repeat the steps above to launch the frontend react application.
+  Repeat the steps above to launch the frontend React application.
 
 <hr/>
 

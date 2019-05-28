@@ -1,4 +1,4 @@
-This is a demo project built for Social Detection. Check out the preview page [Here](http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/). 
+This is a demo project built for Social Detection. Check out the preview page [Here](http://social-detection.s3-website.us-east-2.amazonaws.com/). The app is deployed on AWS EC2(backend) and S2(frontend).
 
 ## Technology Stack:
 
@@ -6,8 +6,21 @@ This is a demo project built for Social Detection. Check out the preview page [H
 
 
 ## How to start the application
+The application uses beautifulsoup and selenium to automate web scrapping process.
 
-Run `npm install` to install all the dependencies, and `npm start` to run the application.
+1. Install beautifulsoup:
+`$ apt-get install python-bs4` (for Python 2)
+
+`$ apt-get install python3-bs4` (for Python 3)
+[Read more](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
+
+2. Set up selenium:
+  `pip install selenium`
+  For OSX, install chromedriver using: `brew install selenium-server-standalone`
+  If you are using Ubuntu, follow this [link](https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/) for detailed steps.
+
+3. Launch app
+  Run `npm install` to install all the dependencies, and `npm start` to run the application.
 
 <hr/>
 

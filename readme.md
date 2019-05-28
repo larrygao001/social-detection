@@ -23,7 +23,8 @@ The application uses beautifulsoup and selenium to automate web scrapping proces
   If you are using Ubuntu, follow this [link](https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/) for detailed steps.
 
 3. Launch app
-  Run `npm install` to install all the dependencies, and `npm start` to run the application.
+  Navigate to backend directory,run `npm install` to install all the dependencies, and `npm start` to run the application.
+  Repeat the steps above to launch the frontend react application.
 
 <hr/>
 

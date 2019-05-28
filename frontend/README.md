@@ -9,7 +9,10 @@ This is a demo project built for Social Detection. Check out the preview page [H
 The application uses beautifulsoup and selenium to automate web scrapping process.
 
 1. Install beautifulsoup:
+
 `$ apt-get install python-bs4` (for Python 2)
+
+
 
 `$ apt-get install python3-bs4` (for Python 3)
 [Read more](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)

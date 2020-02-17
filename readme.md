@@ -1,4 +1,4 @@
-This is a demo project built for Social Detection. Check out the preview page [Here](http://socialdetection.s3-website.us-east-2.amazonaws.com). The app is deployed on AWS EC2(backend) and S3(frontend).
+This is a demo project built for Social Detection. Check out the preview page [Here](http://socialdetection.s3-website.us-east-2.amazonaws.com). (`The live link is currently unavailable because a lack of budget and I have closed the EC2 instance that runs this application, it will be resumed once a cheaper alternative solution is found.`) The app is deployed on AWS EC2(backend) and S3(frontend).
 
 ## Technology Stack:
 
